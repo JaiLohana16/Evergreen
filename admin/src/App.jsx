@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import "C:\\ECOMMERCE\\admin\\src\\index.css"
+import "./index.css"
 import Sidebar from './components/Sidebar'
 import Add from "./pages/Add"
 import List from "./pages/List"
