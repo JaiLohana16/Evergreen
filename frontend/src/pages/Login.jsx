@@ -60,7 +60,7 @@ const Login = () => {
       <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" className='w-full px-3 py-2 border border-gray-800 rounded-lg' placeholder='Email' required/> <div className='flex w-full items-center relative'>
       <input value={password} onChange={(e)=>setPassword(e.target.value)} type={type} className='w-full px-3 py-2 border border-gray-800 rounded-lg' placeholder='Password' required/> <span className='absolute right-5 cursor-pointer' onClick={type=="password"?()=>setType("text"):()=>setType("password")}>{type=="password"?"Show":"Hide"}</span></div>
       <div className='w-full flex justify-between text-sm mt-[-8px]'>
-        <Link to={"https://evergreen-hpwm.onrender.com"} className='cursor-pointer'>{currentState=="Login"?"Admin Login":""}</Link>
+        <Link to={"https://evergreen-admin.onrender.com"} className='cursor-pointer'>{currentState=="Login"?"Admin Login":""}</Link>
         {
           currentState=="Login"?<p className='cursor-pointer' onClick={()=>{setCurrentState("Sign Up")}}>Create Account</p>:
           <p onClick={()=>{setCurrentState("Login")}} className='cursor-pointer'>Already Registered? Login Here</p>
