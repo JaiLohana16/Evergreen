@@ -32,16 +32,16 @@ const {error,success,setSuccess,setError}=useContext(ShopContext)
       <Navbar/>
       <SearchBar/>
       <Routes>
-        <Route path="https://evergreen-hpwm.onrender.com/" element={<Home/>}/>
-        <Route path="https://evergreen-hpwm.onrender.com/collection" element={<Collection/>}/>
-        <Route path="https://evergreen-hpwm.onrender.com/mobilecollection" element={<MobileCollection/>}/>
-        <Route path="https://evergreen-hpwm.onrender.com/about" element={<About/>}/>
-        <Route path="https://evergreen-hpwm.onrender.com/cart" element={<Cart/>}/>
-        <Route path="https://evergreen-hpwm.onrender.com/contact" element={<Contact/>}/>
-        <Route path="https://evergreen-hpwm.onrender.com/login" element={<Login/>}/>
-        <Route path="https://evergreen-hpwm.onrender.com/orders" element={<Orders/>}/>
-        <Route path="https://evergreen-hpwm.onrender.com/place-order" element={<PlaceOrder/>}/>
-        <Route path="https://evergreen-hpwm.onrender.com/product/:productId" element={<Product/>}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/collection" element={<Collection/>}/>
+        <Route path="/mobilecollection" element={<MobileCollection/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/cart" element={<Cart/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/orders" element={<Orders/>}/>
+        <Route path="/place-order" element={<PlaceOrder/>}/>
+        <Route path="/product/:productId" element={<Product/>}/>
       </Routes>
       <Footer/>
     </div>
