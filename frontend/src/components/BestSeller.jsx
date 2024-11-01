@@ -6,7 +6,7 @@ import ProductItem from './ProductItem'
 import { useState } from 'react'
 
 const BestSeller = () => {
-    const {products} =useContext(ShopContext)
+    const {products,loading,setLoading} =useContext(ShopContext)
     const[bestsellingProducts,setBestsellingProducts]=useState([])
     console.log(products)
 
@@ -34,12 +34,12 @@ const BestSeller = () => {
         </div>
 
         {/* Rendering Items */}
-
+        {loading?<div className='text-xl font-bold'>Loading Products Please Wait</div>:
         <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6'>
             {bestsellingProducts.map((item,index)=>(
                 <ProductItem key={index} image={item.image} name={item.name} id={item._id} price={item.price} />
             ))}
-        </div>
+        </div>}
     </div>
   )
 }
