@@ -17,17 +17,17 @@ const Orders = ({ token }) => {
       return null
     }else{
       try {
-      const response = await axios.post(backendUrl + "api/order/list", {}, { headers: { token } })
+      const response = await axios.post(backendUrl + "api/order/list", {}, { headers: { Authorization: `Bearer ${token}` }})
         console.log(response)
       if (response.data.success) {
         setLoading(false)
         setOrders(response.data.orders.reverse())
       }
       else {
-        setError(response.data.message)
+      setError(error.response?.data?.message || error.message)
       }
     } catch (error) {
-      setError(error.message)
+      setError(error.response?.data?.message || error.message)
     }
   }
     }
