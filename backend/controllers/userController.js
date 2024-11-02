@@ -55,7 +55,7 @@ export const registerUser = async (req, res) => {
 export const adminLogin = async (req, res) => {
     try {
         const { email, password } = req.body;
-        if (email === "lohana@evergreen.com" && password === "Lohana@123) {
+        if (email === "lohana@evergreen.com" && password === "Lohana@123") {
             const token = jwt.sign({ email }, process.env.JWT_SECRET);
             res.json({ success: true, token });
         } else {
