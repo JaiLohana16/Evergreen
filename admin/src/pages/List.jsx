@@ -19,7 +19,7 @@ const List = ({token}) => {
   }
 const RemoveProduct =async(id)=>{
   try {
-    const response =await axios.post(backendUrl+"api/product/remove",{id},{headers:{token}})
+    const response =await axios.post(backendUrl+"api/product/remove",{id},{ headers: { Authorization: `Bearer ${token}` }})
     if(response.data.success){
       setDone("Product Deleted Successfully")    
       await fetchList()
