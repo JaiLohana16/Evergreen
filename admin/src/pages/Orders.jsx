@@ -9,7 +9,7 @@ const Orders = ({ token }) => {
   const [orders, setOrders] = useState([])
   const [done, setDone] = useState("")
   const [error, setError] = useState("")
-  const [loading, setLoading] = useState(ture)
+  const [loading, setLoading] = useState(true)
 
 
   const fetchAllOrders = async () => {
