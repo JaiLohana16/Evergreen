@@ -55,8 +55,8 @@ export const registerUser = async (req, res) => {
 export const adminLogin = async (req, res) => {
     try {
         const { email, password } = req.body;
-        if (email ===  process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
-            const token = jwt.sign({ email }, process.env.JWT_SECRET);
+        if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
+            const token = jwt.sign({ email, isAdmin: true }, process.env.JWT_SECRET);
             res.json({ success: true, token });
         } else {
             res.json({ success: false, message: "Invalid Credentials" });
@@ -65,3 +65,4 @@ export const adminLogin = async (req, res) => {
         res.json({ success: false, message: error.message });
     }
 };
+
