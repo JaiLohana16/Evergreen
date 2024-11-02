@@ -49,6 +49,7 @@ const Orders = ({ token }) => {
   return (
 
     <div>
+          <p className='text-red-500'>{error}</p>
       <h3>Order Page</h3>
       <div>
         {loading ? <div>Loading Orders Please wait</div> :
