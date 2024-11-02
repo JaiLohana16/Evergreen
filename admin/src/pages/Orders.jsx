@@ -5,7 +5,7 @@ import axios from "axios"
 import { backendUrl, currency } from "../App"
 import { assets } from '../assets/assets'
 
-const Orders = ({ token }) => {
+const Orders = ({token}) => {
   const [orders, setOrders] = useState([])
   const [done, setDone] = useState("")
   const [error, setError] = useState("")
