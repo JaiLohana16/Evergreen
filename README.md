@@ -1,6 +1,3 @@
-Here's a README template for your e-commerce website project:
-
----
 
 # Evergreen Mobile Shop - E-commerce Website
 
