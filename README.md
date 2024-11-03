@@ -124,4 +124,3 @@ For any issues while running locally, ensure the API endpoints and configuration
 
 ---
 
-This README provides a structured overview of your project for anyone viewing your repository, setting up the project, or looking to understand the overall functionalities!
