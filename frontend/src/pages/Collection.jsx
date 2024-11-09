@@ -6,6 +6,9 @@ import { assets } from '../assets/assets'
 import Title from '../components/Title'
 
 const Collection = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   const { products,search,showSearch} = useContext(ShopContext)
   const [showFilter, setShowFilter] = useState(false)
   const [FilteredProducts, setFilteredProducts] = useState([])
