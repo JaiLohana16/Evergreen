@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import Title from "../components/Title"
 import CartTotal from "../components/CartTotal"
 import { assets } from '../assets/assets'
@@ -8,6 +8,9 @@ import axios from "axios"
 
 
 const PlaceOrder = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   const { navigate, backendURl, delivery_fee, token, cartItems, setCartItems, getCartAmount, products,setError,error } = useContext(ShopContext)
   const [method, setMethod] = useState("cod")
   const [formData, setFormData] = useState({ firstName: "", lastName: "", email: "", street: "", city: "", state: "", zipcode: "", country: "", phone: "" })
