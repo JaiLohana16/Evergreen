@@ -6,13 +6,16 @@ import { assets } from '../assets/assets'
 import Title from '../components/Title'
 
 const Collection = () => {
+  
   const { products,search,showSearch} = useContext(ShopContext)
   const [showFilter, setShowFilter] = useState(false)
   const [FilteredProducts, setFilteredProducts] = useState([])
   const [category , setCategory] =useState([])
   const [subCategory,setSubCategory]=useState([])
   const [sortType,setSortType]=useState('relavent')
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   const toggleCategory=(e)=>{   
     // logic when user unchecks the option 
     if (category.includes(e.target.value)){
