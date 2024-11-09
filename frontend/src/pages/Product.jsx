@@ -10,13 +10,16 @@ import { backendURl } from '../App'
 
 
 const Products = () => {
+  
   const { productId } = useParams()
   const { products, currency,addToCart,cartItems ,error,success} = useContext(ShopContext)
   const [productData, setProductData] = useState(false)
   const [colour, setColour] = useState("")
   const [image, setImage] = useState("")
   const [reviewsVisible, setReviewsVisible] = useState(false);
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [productId])
 
   async function getProductData() {
     products.map((item, index) => {
