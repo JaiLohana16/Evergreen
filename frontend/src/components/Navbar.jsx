@@ -22,8 +22,8 @@ const Navbar = () => {
     return (
         <div className='flex items-center justify-between py-5 font-medium'>
             <Link to={"/"}>
-            <p className='w-52  text-center rounded-lg font-extrabold bg-green-700 text-3xl text-white italic' >EVERGREEN
-            <p className='w-20  text-center  font-extrabold text-sm text-white relative left-24 italic' >Communication</p></p>
+            <p className='w-52  text-center rounded-lg font-extrabold bg-green-700 text-3xl text-white' >EVERGREEN
+            <p className='w-20  text-center  font-extrabold text-sm text-white relative left-24' >Communication</p></p>
                 {/* <img src={assets.logo} className='w-32 rounded-lg bg-green-500' alt="logo" /> */}
             </Link>
 
