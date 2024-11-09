@@ -19,7 +19,7 @@ const Products = () => {
   const [reviewsVisible, setReviewsVisible] = useState(false);
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [productId])
+  }, [image])
 
   async function getProductData() {
     products.map((item, index) => {
