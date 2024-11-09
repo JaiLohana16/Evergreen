@@ -1,63 +1,3 @@
-
-// import React, { useContext, useEffect, useState } from 'react';
-// import { ShopContext } from '../context/ShopContext';
-// import { Link } from 'react-router-dom';
-// const Cart = () => {
-//   const { products, currency} = useContext(ShopContext);
-//   const [cartData, setCartData] = useState([]);
-
-
-// //   useEffect(() => {
-// //     const fetchCartData = async () => {
-// //       const updatedCartData = await Promise.all(
-// //         cartItems.map(async (item) => {
-// //           const productData = products.find((product) => product._id === item.Id);
-// //           return { ...productData, quantity: item.quantity };
-// //         })
-// //       );
-// //       setCartData(updatedCartData);
-// //     };
-
-// //     fetchCartData();
-// // }, [cartItems, products]);
-
-// //   const deleteProducts=(indexclicked)=>{
-// //     const cpydata=[...cartData]
-// //     let updated =cpydata.filter((item,index)=>{
-// //       index!=indexclicked
-// //     })
-// //     setCartData(updated)
-
-// //   }
-
-
-
-
-
-//   return (
-//     <div>
-//       {cartData.length > 0 ? (
-//         cartData.map((item, index) => (
-//           <div key={index} className='flex gap-5 m-5'>
-//             <Link to={`/product/${item._id}`}><img src={item.image[0]} alt="image" className='w-24' />
-//             </Link>            
-//             <div>
-//             <p>{item.name}</p>
-//             <p>{currency} {(item.price*10)-1}</p>
-//             <p>Quantity: {item.quantity}</p>
-//             <button onClick={()=>deleteProducts(index)}>Delete</button>
-//             </div>
-//           </div>
-//         ))
-//       ) : (
-//         <p>Your cart is empty.</p>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default Cart;
-
 import React, { useContext, useEffect } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import { useState } from 'react'
@@ -67,6 +7,9 @@ import CartTotal from '../components/CartTotal'
 import { Link } from 'react-router-dom'
 
 const Cart = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   const { products, currency, cartItems, updateQuantity, isDisabled, navigate, token, getUserCart } = useContext(ShopContext)
   const [cartData, setCartData] = useState([])
 
