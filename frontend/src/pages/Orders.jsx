@@ -7,7 +7,9 @@ import axios from "axios"
 const Orders = () => {
   const {backendURl,token,currency,getUserCart}=useContext(ShopContext)
   const [orderData,setOrderData] =useState([])
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   const loadOrderdata=async()=>{
     try {
       if (!token) {
