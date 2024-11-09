@@ -1,7 +1,11 @@
 import React from 'react'
 import Title from "../components/Title"
 import { assets } from '../assets/assets'
+import { useEffect } from 'react'
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   return (
     <div>
       <div className='text-2xl text-center pt-8 borrder-t'>
