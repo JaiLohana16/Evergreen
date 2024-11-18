@@ -168,7 +168,7 @@ const Add = ({token}) => {
       <div>
         <p className='mb-2'>Product Colours</p>
         <div className='flex gap-3'>
-          {["Black", "White", "Blue","Orange","Brown","Green","Purple","Pink","Golden"].map(colour => (
+          {["Black", "White","Red","Blue","Orange","Brown","Green","Purple","Pink","Golden"].map(colour => (
             <div key={colour} onClick={() => setColours(prev => prev.includes(colour) ? prev.filter(item => item !== colour) : [...prev, colour])}>
               <p className={`${colours.includes(colour) ? "border border-black" : ""} bg-slate-200 px-3 py-1 cursor-pointer`}>{colour}</p>
             </div>
