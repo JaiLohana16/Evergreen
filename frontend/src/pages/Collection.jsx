@@ -37,8 +37,7 @@ const Collection = () => {
   }
 
   function ApplyFilter() {
-    let productsCpy=products.slice(0,26)
-    
+    let productsCpy=products.filter(item=>item.category.includes("Accessories"))
     if(search){productsCpy=productsCpy.filter(item=>item.name.toLowerCase().includes(search.toLowerCase()))}
 
 
